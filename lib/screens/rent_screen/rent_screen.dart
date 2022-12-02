@@ -183,19 +183,18 @@ class RentScreenState extends State<RentScreen> {
                         SizedBox(
                           width: 10,
                         ),
-                        GestureDetector(onTap: () {
-                          setState(() {
-val3=!val3;                            
-                          });
-                        },
-                       child: Switch(
-                          value: val3,
-                          onChanged: (value) {
-                           
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              val3 = !val3;
+                            });
                           },
-                          activeTrackColor: Colors.lightGreenAccent,
-                          activeColor: Colors.green,
-                        ),
+                          child: Switch(
+                            value: val3,
+                            onChanged: (value) {},
+                            activeTrackColor: Colors.lightGreenAccent,
+                            activeColor: Colors.green,
+                          ),
                         ),
                       ],
                     ),
@@ -222,28 +221,27 @@ val3=!val3;
                               );
                             });
                       },
-                      child:
-                    Padding(
-                      padding: EdgeInsets.all(20),
-                      child: Container(
-                        height: 50,
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          color: Colors.green,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Rent",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600,
+                      child: Padding(
+                        padding: EdgeInsets.all(20),
+                        child: Container(
+                          height: 50,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Center(
+                            child: Text(
+                              "Rent",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.w600,
+                              ),
                             ),
                           ),
                         ),
                       ),
-                    ),
                     ),
                   ],
                 ))
