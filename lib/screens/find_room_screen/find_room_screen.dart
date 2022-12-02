@@ -128,7 +128,21 @@ class FindRoomScreen extends StatelessWidget {
                         address: currentApartment.address,
                         beds: currentApartment.beds,
                         baths: currentApartment.baths,
-                        onClicked: () {},
+                        onClicked: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ApartmentCard(
+                                      address: currentApartment.address,
+                                      amount: currentApartment.amount,
+                                      baths: currentApartment.baths,
+                                      beds: currentApartment.beds,
+                                      city: currentApartment.city,
+                                      id: currentApartment.id,
+                                      imageAddress:
+                                          currentApartment.imageAddress,
+                                      length: currentApartment.area,
+                                      onClicked: () {},
+                                    ))),
                         length: Apartments().apartments.length,
                       ),
                     ],

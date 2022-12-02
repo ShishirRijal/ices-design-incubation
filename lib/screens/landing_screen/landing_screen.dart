@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ices_desgin_incubation/screens/find_room_screen/find_room_screen.dart';
+import 'package:ices_desgin_incubation/screens/rent_screen/rent_screen.dart';
 import 'package:ices_desgin_incubation/utils/font_manager.dart';
 
 class Action {
@@ -51,16 +53,30 @@ class _LandingScreenState extends State<LandingScreen> {
                         ),
                       ),
                       const SizedBox(height: 20.0),
-                      const ImageStackedContainer(
-                        title: 'Find yourself a room',
-                        imageAddress:
-                            "https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => FindRoomScreen()));
+                        },
+                        child: const ImageStackedContainer(
+                          title: 'Find yourself a room',
+                          imageAddress:
+                              "https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+                        ),
                       ),
                       const SizedBox(height: 20.0),
-                      const ImageStackedContainer(
-                        title: 'Rent your room',
-                        imageAddress:
-                            "https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+                      GestureDetector(
+                        onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => RentScreen()),
+                        ),
+                        child: const ImageStackedContainer(
+                          title: 'Rent your room',
+                          imageAddress:
+                              "https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+                        ),
                       ),
                       const SizedBox(height: 20.0),
                     ],

@@ -3,6 +3,7 @@ import 'package:ices_desgin_incubation/modles/apartment.dart';
 import 'package:ices_desgin_incubation/screens/detail_screen/detail_screen.dart';
 
 import 'screens/find_room_screen/find_room_screen.dart';
+import 'screens/landing_screen/landing_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.white,
         fontFamily: 'Poppins',
       ),
-      home: DetailScreen(apartment: Apartments().apartments[0]),
+      home: LandingScreen(),
     );
   }
 }
