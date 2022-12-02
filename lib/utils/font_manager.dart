@@ -68,6 +68,21 @@ TextStyle getMediumTextStyle({
   );
 }
 
+// * SemiBold Text Style
+TextStyle getSemiBoldTextStyle({
+  double fontSize = 22.0,
+  Color color = Colors.black,
+  FontWeight fontWeight = FontWeight.w600,
+  String fontFamily = FontFamily.poppins,
+}) {
+  return getTextStyle(
+    fontSize: fontSize,
+    color: color,
+    fontWeight: fontWeight,
+    fontFamily: fontFamily,
+  );
+}
+
 // * Bold Text Style
 TextStyle getBoldTextStyle({
   double fontSize = 24.0,
